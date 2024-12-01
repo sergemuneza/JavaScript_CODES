@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+   <body>
+       <p id="welcomeMessage"></p>
+       <script>
+            console.log("Hello world");
+            let a="Welcome to the world of  JavaScript";
+            let length=a.length;
+            console.log("Length of string is "+length); 
+            let b=a.charAt(0)
+            console.log("First character of the string is "+b);
+            let c=a.at(length-1)
+            console.log("Last character of the string is "+c);
+            let slicedString=a.slice(0,7);
+            console.log("Sliced string is "+slicedString); 
+
+            let d=a.substring(0,7);
+            console.log("substring is "+d); 
+
+            let uppercaseString=a.toUpperCase();
+            console.log("Uppercase string is "+uppercaseString);
+            let lowercaseString=a.toLowerCase();
+            console.log("Lowercase string is "+lowercaseString);
+
+            let replacedString=a.replace("JavaScript","HTML");
+            console.log("Replaced string is "+replacedString);
+            
+            let duplicateString="Hello to the world of javascript.Javascript is a programming language used";
+            let replacedAllString=duplicateString.replaceAll("JavaScript","HTML");
+            console.log("replaced all string is "+replacedAllString);
+
+            let arrayString="HTML,CSS,JAVASCRIPT,REACT,ANGULAR,VUE";
+            let splittedArray=arrayString.split(",");
+            console.log("Splitted array is ");
+            for (let i=0;i<splittedArray.length;i++)
+            {
+                console.log(splittedArray[i]);
+            }
+
+            let str1="hello";
+            let str2="world";
+            let str3="!";
+            let combinedString=str1.concat(str2, str3);
+            console.log("Combined string is "+combinedString);
+
+        let stringToTrim = " Hello World ";
+        let trimmedString = stringToTrim.trim();
+        console.log("Trimmed string is "+trimmedString);
+        console.log("Length of trimmed string is "+stringToTrim.length);
+        console.log("Length of trimmed string is "+trimmedString.length);
+        
+
+        console.log("========================String Templates===================")
+        let name="John";
+        console.log(`Hello ${name}!`);
+        console.log("Hello "+name);
+
+        function getFullName(firstname, lastname)
+        {
+            return `${firstname} ${lastname}`; 
+        }
+        console.log(`My names are ${getFullName("John", "Dor")}`);
+
+            console.log("===============NUMBERS FUNCTION==============")
+            let num1=10;
+            console.log("num1 is "+num1.toString());
+
+            let num2=12345.567
+            let exponentialNum2=num2.toExponential(2);
+            console.log("Exponential Number is "+exponentialNum2);
+            let fixedNum2=num2.toFixed(2);
+            console.log("fixed number is "+fixedNum2)
+
+            console.log("=======================ARRAYS===================");
+            let course=["HTML","CSS","JAVASCRIPT","REACT","ANGULAR","VUE"];
+            const students=[]
+            students[0]="John";
+            students[1]="Doe";
+            students[2]="John";
+            students[3]="John";
+            console.log("Students are ");
+            for(let i=0;i<students.length;i++)
+            {
+                console.log(students[i]);
+            }
+
+            console.log("=============FUNCTIONS ON ARRAYS============")
+            let fruits=["apple","banana","mango","orange","grapes"];
+
+            //Length
+            const fruitsLength=fruits.length;
+            console.log("Length of fruits array is "+fruitsLength);
+
+            //toString
+            const fruitsString=fruits.toString(); 
+            console.log("fruits array as string is "+fruitsString);
+
+            //At
+            const arrayElement=fruits.at(2);
+            console.log("Element at index 2 is "+arrayElement);
+
+            //Join
+            const fruitsJoin=fruits.join(" - ");
+            console.log("Fruits array joined with - is "+fruitsJoin);
+
+            //Pop
+            const poppedElement=fruits.pop();
+            console.log("Popped element is "+poppedElement);
+            console.log("Popped elements after pop is");
+            for (let i=0;i<fruits.length;i++)
+            {
+                console.log(fruits[i]);
+            }
+
+            // Push
+            /*fruits.push("coconut");
+            console.log("Fruits after push is ");
+            for (let i=0;i<fruits.length;i++)
+            {
+                console.log(fruits[i]);
+            }*/
+            //Splice
+            //fruits=["apple","banana","mango","orange","grapes"];
+            fruits.splice(1,1,"pineapple");
+            console.log("fruits array after splice ");
+            for (let i=0;i<fruits.length;i++) 
+            {
+                console.log(fruits[i]);
+            }
+
+            //shift
+            fruits.splice(3,4,"Pawpaw");
+            console.log("fruits array after splice ");
+            for (let i=0;i<fruits.length;i++) 
+            {
+                console.log(fruits[i]);
+            }
+
+            //concat
+            const array1=["a","b","c"];
+            const array2=["d","e","f"];
+            const array3=array1.concat(array2);
+            console.log("array3 is ");
+            for(let i=0;i<array3.length;i++)
+            {
+                console.log(array3[i]);
+            }
+        
+            //Slice
+            const itCourses=["HTML","CSS","JAVASCRIPT","REACT","ANGULAR","VUE"];
+            const slicedCourse=itCourses.slice(3,itCourses.legth-1);
+            console.log("Sliced courses are ");
+            for(let i=0;i<slicedCourse.length;i++)
+            {
+                console.log(slicedCourse[i]);
+            }
+
+            const arr1=[1,2,3,4,5];
+            const sliceArr1=arr1.slice(2,5);
+            console.log("Sliced array is ");
+            for(let i=0;i<sliceArr1.length;i++)
+            {
+                console.log(sliceArr1[i]);
+            }
+
+            //Index of lastIndexOf
+            const fruits1=["apple","banana","mango","orange","grapes","mango"];
+            const indexOfMango=fruits1.indexOf("mango");
+            console.log("Index of mango is "+indexOfMango);
+
+            const lastIndexOfMango=fruits1.lastIndexOf("mango");
+            console.log("Index of mango is "+lastIndexOfMango);
+            
+            //includes
+            /*const isMansgoIncluded=frusts1.includes("pineapple");
+            console.log("Is mango included in fruits1 array "+isMangoIncluded);*/
+
+             // Find
+        const numbers = [4,9,16,25,36];
+        let numOver30=numbers.find(num=>num>30);
+        console.log("Number over 30 is "+numOver30)
+        
+//FindIndex and findLastIndex
+
+
+console.log("======================")
+const numb = [1,3,5,7,9,10];
+let numberOver10=numb.find(num=>num>=10);
+console.log("Number over 9 is "+numberOver10);
+
+
+
+
+       </script>
+   </body>
+</body>
+</html>
